@@ -1,34 +1,66 @@
 import React from "react";
-import { FaPlane, FaHotel, FaPassport, FaMapMarkedAlt } from "react-icons/fa";
+import { FaPlane, FaHotel, FaPassport, FaMapMarkedAlt, FaMosque } from "react-icons/fa";
 
 const services = [
-  { name: "Tour Packages", icon: <FaMapMarkedAlt size={40} /> },
-  { name: "Air Ticket Booking", icon: <FaPlane size={40} /> },
-  { name: "Visa Processing", icon: <FaPassport size={40} /> },
-  { name: "Hotel Reservations", icon: <FaHotel size={40} /> },
+  {
+    name: "Air Ticketing",
+    icon: <FaPlane size={24} />,
+    details:
+      "Domestic and international flight bookings. Competitive fares with reliable airlines. Assistance with schedule changes and rebooking.",
+  },
+  {
+    name: "Tour Packages",
+    icon: <FaMapMarkedAlt size={24} />,
+    details:
+      "Domestic tours (Cox’s Bazar and other destinations). International tours (India and selected global destinations). Customized tour packages based on customer needs.",
+  },
+  {
+    name: "Visa Assistance",
+    icon: <FaPassport size={24} />,
+    details:
+      "Tourist and visit visa processing support. Documentation guidance and application follow-up. Country-specific visa consultancy.",
+  },
+  {
+    name: "Hotel Reservations",
+    icon: <FaHotel size={24} />,
+    details:
+      "Budget, standard, and premium hotel bookings. Flexible options based on travel plans. Verified accommodation partners.",
+  },
+  {
+    name: "Hajj & Umrah Services",
+    icon: <FaMosque size={24} />,
+    details:
+      "Complete Umrah packages. Hajj consultancy and guidance. Accommodation and travel coordination.",
+  },
 ];
 
 const Services = () => {
   return (
-    <section className="py-20 bg-green-100">
+    <section className="py-20 bg-blue-50 shadow-2xl">
       <div className="max-w-7xl mx-auto px-4 text-center">
-        <h3 className="text-3xl font-bold mb-12 text-purple-800">
+        <h3 className="text-3xl md:text-4xl font-bold mb-12 text-sky-800">
           Our Services
         </h3>
 
-        <div className="grid gap-8 sm:grid-cols-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8">
           {services.map((service, i) => (
-            <div
-              key={i}
-              className="flex flex-col items-center p-8 bg-gray-100 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2"
-            >
-              <div className="text-indigo-500 mb-4">{service.icon}</div>
-              <h4 className="font-semibold text-xl text-gray-700">
+            <div key={i} className="flex flex-col items-center">
+              
+              {/* Circle Icon */}
+              <div className="flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 bg-sky-800 rounded-full shadow-md text-white mb-4 hover:scale-110 transition-transform">
+                {service.icon}
+              </div>
+
+              {/* Service Name */}
+              <h4 className="font-semibold text-lg sm:text-xl text-gray-700 mb-2">
                 {service.name}
               </h4>
-              <p className="text-gray-500 mt-2 text-center text-sm">
-                High quality {service.name.toLowerCase()} tailored for your needs.
+
+              {/* Service Details as paragraph */}
+              <p className="text-gray-500 text-xs sm:text-sm text-center px-2">
+                {service.details}
               </p>
+
             </div>
           ))}
         </div>

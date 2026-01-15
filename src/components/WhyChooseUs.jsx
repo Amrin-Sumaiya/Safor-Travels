@@ -1,28 +1,44 @@
-import React from 'react'
-const points = [
-  "Trusted & Reliable",
-  "Affordable Packages",
-  "24/7 Customer Support",
-  "Experienced Travel Experts",
-];
+import React from "react";
+import whyImage from "../assets/tour.jpg"; // your large image
+
 
 const WhyChooseUs = () => {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-blue-100">
       <div className="max-w-7xl mx-auto px-4">
-        <h3 className="text-3xl font-bold text-center text-purple-800 mb-10">
-          Why Choose Safor Travels
-        </h3>
 
-        <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-4">
-          {points.map((item, i) => (
-            <div
-              key={i}
-              className="bg-green-100 p-6 rounded-xl shadow text-center"
-            >
-              <p className="font-medium">{item}</p>
-            </div>
-          ))}
+        <div className="flex flex-col md:flex-row items-start gap-12">
+
+          {/* Left Image */}
+          <div className="md:w-1/2 w-full">
+            <img
+              src={whyImage}
+              alt="Why Choose Us"
+              className="w-full rounded-3xl shadow-lg object-cover max-h-[600px]"
+            />
+          </div>
+
+          {/* Right Content */}
+          <div className="md:w-1/2 w-full flex flex-col justify-start">
+            
+   
+
+            {/* Heading */}
+            <h2 className="text-3xl md:text-4xl font-bold text-sky-800 mb-6">
+              Why Choose Safor Travels?
+            </h2>
+
+            {/* Paragraph */}
+            <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-8">
+           For Customer-focused service approach, Affordable and transparent pricing, Professional travel guidance, Reliable support before and during travel, Commitment to quality and trust
+            </p>
+
+            {/* Rounded Button */}
+            <button className="px-2 py-3 border-2 font-semibold border-sky-800 text-sky-800 rounded-full hover:bg-sky-800 hover:text-white transition">
+              Explore Awesome Trips →
+            </button>
+
+          </div>
         </div>
       </div>
     </section>
@@ -30,4 +46,3 @@ const WhyChooseUs = () => {
 };
 
 export default WhyChooseUs;
-

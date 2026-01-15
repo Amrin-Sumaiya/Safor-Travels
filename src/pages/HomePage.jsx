@@ -13,9 +13,10 @@ const HomePage = () => {
     <>
     <Navbar />
     <Hero />
+    <Packages />
     <Services />
     <WhyChooseUs />
-    <Packages />
+    
     <CallToAction />
     <Footer />
     </>

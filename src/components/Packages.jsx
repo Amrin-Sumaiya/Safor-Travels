@@ -1,71 +1,74 @@
 import React from "react";
-import { FaPlane, FaHotel, FaUmbrellaBeach } from "react-icons/fa";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
 
-// Sample package data with direct image URLs
-const packages = [
-  {
-    name: "Beach Paradise",
-    description: "Relax on pristine beaches with crystal clear waters.",
-    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-    icon: <FaUmbrellaBeach size={30} />,
-  },
-  {
-    name: "City Explorer",
-    description: "Discover the most vibrant cities around the world.",
-    image: "https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=800&q=80",
-    icon: <FaPlane size={30} />,
-  },
-  {
-    name: "Mountain Adventure",
-    description: "Hike, trek, and enjoy breathtaking mountain views.",
-    image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80",
-    icon: <FaHotel size={30} />,
-  },
-  {
-    name: "Cultural Journey",
-    description: "Experience the rich history and culture of new places.",
-    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-    icon: <FaPlane size={30} />,
-  },
-];
+import "swiper/css";
+
+import bg1 from "../assets/place1.jpg";
+import bg2 from "../assets/place22.jpg";
+import bg3 from "../assets/place33.jpg";
+import woman from "../assets/boy.png";
 
 const Packages = () => {
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 text-center mb-12">
-        <h3 className="text-3xl font-bold mb-4 text-gray-800">
-          Popular Tour Packages
-        </h3>
-        <p className="max-w-xl mx-auto text-gray-600">
-          Domestic & international travel packages customized for your comfort
-          and budget.
-        </p>
-      </div>
+    <section className="py-24 bg-blue-100">
+      <div className="max-w-7xl mx-auto px-4">
 
-      <div className="max-w-7xl mx-auto px-4 grid gap-8 sm:grid-cols-2 lg:grid-cols-2">
-        {packages.map((pkg, i) => (
-          <div
-            key={i}
-            className="relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 bg-white"
+        <h3 className="text-center text-2xl md:text-3xl font-semibold text-sky-800 mb-8">
+          100+ tour packages waiting for you
+        </h3>
+
+        <div className="relative overflow-hidden rounded-[80px] h-65 sm:h-60 md:h-80 lg:h-96">
+
+          {/* Background Slider */}
+          <Swiper
+            modules={[Autoplay]}
+            autoplay={{
+              delay: 1000,
+              disableOnInteraction: false,
+            }}
+            speed={1200}
+            loop
+            slidesPerView={1}
+            className="absolute inset-0 z-0"
           >
-            <img
-              src={pkg.image}
-              alt={pkg.name}
-              className="w-full h-56 object-cover"
-            />
-            <div className="p-6 text-left">
-              <div className="flex items-center space-x-3 mb-3 text-indigo-600">
-                {pkg.icon}
-                <h4 className="font-semibold text-xl">{pkg.name}</h4>
-              </div>
-              <p className="text-gray-600 text-sm mb-4">{pkg.description}</p>
-              <button className="bg-indigo-800 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-red-500 transition">
-                Book Now
-              </button>
-            </div>
+            {[bg1, bg2, bg3].map((img, i) => (
+              <SwiperSlide key={i}>
+                <img
+                  src={img}
+                  alt="Package Background"
+                  className="w-full h-full object-cover"
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+
+          {/* Dark Overlay */}
+          <div className="absolute inset-0 bg-black/30 z-10"></div>
+
+          {/* Center Transparent Title */}
+          <div className="absolute inset-0 z-30 flex  justify-center pointer-events-none">
+            <h2 className="text-3xl md:text-5xl font-bold text-white/80 mt-10 md:mt-16 lg:mt-20">
+              Enjoy your trip
+            </h2>
           </div>
-        ))}
+
+          {/* Girl Image */}
+          <div className="absolute mt-6  inset-0 z-20 flex items-end justify-center pointer-events-none">
+            <img
+              src={woman}
+              alt="Traveler"
+              className="h-[120%] object-contain mb-[-9%]" 
+            />
+          </div>
+
+        </div>
       </div>
+      <br />
+      <br />
+      <h2 className="text-center text-sky-800 font-semibold text-2xl "> ─── Featured service ───
+</h2>
+
     </section>
   );
 };
