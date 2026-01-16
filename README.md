@@ -1,18 +1,57 @@
-# React + Vite
+# ✈️ Safor Travels Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Official website for **Safor Travels**, a modern travel and tourism platform offering domestic & international trips, tour packages, visa services, and Umrah & Hajj solutions.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌍 Live Website
+🔗 [https://your-live-site-url.com](https://safor-travels.vercel.app/)
 
-## React Compiler
+---
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## 📌 Project Overview
 
-Note: This will impact Vite dev & build performances.
+Safor Travels is designed to provide users with a seamless experience for discovering travel packages, exclusive trip offers, and religious journeys such as **Umrah & Hajj**.  
+The website emphasizes **clean UI, smooth navigation, and responsive design**.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🧱 Tech Stack
+
+- **Frontend:** React.js
+- **Styling:** Tailwind CSS
+- **Icons:** React Icons
+- **Navigation:** Smooth Scroll / Hash Navigation
+- **Build Tool:** Vite
+- **Version Control:** Git & GitHub
+
+---
+
+## 📂 Project Folder Structure
+
+```bash
+src/
+├── assets/                 # Images, banners, icons
+│   ├── logo.png
+│   ├── hero.jpg
+│   ├── packages/
+│   └── ...
+│
+├── components/             # Reusable UI components
+│   ├── Navbar.jsx
+│   ├── Hero.jsx
+│   ├── AboutUs.jsx
+│   ├── Services.jsx
+│   ├── WhyChooseUs.jsx
+│   ├── Packages.jsx
+│   ├── TripOffer.jsx
+│   ├── CallToAction.jsx
+│   └── Footer.jsx
+│
+├── pages/                  # Page-level components
+│   └── HomePage.jsx
+│
+├── App.jsx                 # Root component
+├── main.jsx                # Entry point
+├── index.css               # Tailwind base styles
+└── vite.config.js
