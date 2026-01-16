@@ -73,7 +73,7 @@ const travelOffers = [
 
 const MissionVisionOffers = () => {
   return (
-    <section className="py-24 bg-sky-100">
+    <section id="trips" className="py-24 bg-sky-100">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* TITLE */}

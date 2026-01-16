@@ -13,7 +13,7 @@ import hero4 from "../assets/place4.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative pt-20">
+    <section id="home" className="relative pt-20">
       {/* Swiper */}
       <Swiper
         modules={[Autoplay, EffectFade]}
