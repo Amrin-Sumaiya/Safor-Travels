@@ -4,7 +4,7 @@ import whyImage from "../assets/tour.jpg"; // your large image
 
 const WhyChooseUs = () => {
   return (
-    <section className="py-20 bg-blue-100">
+    <section className="py-20 bg-blue-0 bg-blue-50 shadow-2xl">
       <div className="max-w-7xl mx-auto px-4">
 
         <div className="flex flex-col md:flex-row items-start gap-12">
@@ -29,12 +29,12 @@ const WhyChooseUs = () => {
             </h2>
 
             {/* Paragraph */}
-            <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-8">
-           For Customer-focused service approach, Affordable and transparent pricing, Professional travel guidance, Reliable support before and during travel, Commitment to quality and trust
+            <p className="text-gray-700 text-base md:text-lg font-semibold leading-relaxed mb-8">
+           Customer-focused service approach, Affordable and transparent pricing, Professional travel guidance, Reliable support before and during travel, Commitment to quality and trust
             </p>
 
             {/* Rounded Button */}
-            <button className="px-2 py-3 border-2 font-semibold border-sky-800 text-sky-800 rounded-full hover:bg-sky-800 hover:text-white transition">
+            <button className="px-2 py-3 border-2 font-semibold border-sky-800 text-white bg-sky-800  rounded-full hover:bg-sky-600 hover:text-white transition">
               Explore Awesome Trips →
             </button>
 

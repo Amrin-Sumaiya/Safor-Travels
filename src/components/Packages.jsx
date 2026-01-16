@@ -66,7 +66,7 @@ const Packages = () => {
       </div>
       <br />
       <br />
-      <h2 className="text-center text-sky-800 font-semibold text-2xl "> ─── Featured service ───
+      <h2 className="text-center text-sky-800 font-semibold text-2xl "> ─── Your Trusted Travel Partner ───
 </h2>
 
     </section>
