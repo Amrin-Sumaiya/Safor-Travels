@@ -23,7 +23,7 @@ const Footer = () => {
 
           <div className="flex gap-4 justify-end">
             <a
-              href="https://www.facebook.com/"
+              href="https://www.facebook.com/safortravelagency"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-blue-600 transition"
@@ -50,7 +50,7 @@ const Footer = () => {
             </a>
 
             <a
-              href="https://wa.me/880XXXXXXXXXX"
+              href="https://wa.me/+8801711792071"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-green-600 transition"
