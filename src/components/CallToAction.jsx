@@ -41,7 +41,7 @@ const Contact = () => {
 
             <div className="flex items-center gap-4 bg-white rounded-xl p-5 shadow-md">
               <FaMapMarkerAlt className="text-sky-700 text-xl shrink-0" />
-              <span className="text-gray-800">Dhaka, Bangladesh</span>
+              <span className="text-gray-800">1296, East Monipur, Mirpur 10, Dhaka, Bangladesh, 1216</span>
             </div>
 
             {/* Social Links */}
